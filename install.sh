@@ -1,6 +1,16 @@
 #apt-get -y update
 #apt-get -y install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
 
+
+## LOCALE
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8
+get_iplayer
+
+exit 0;
+
 ## Install SNIPROXY
 git clone https://github.com/dlundquist/sniproxy.git 
 cd sniproxy*
@@ -20,12 +30,7 @@ sniproxy
 ps aux | grep sni
 tail -f /var/log/sniproxy/https_access.log
 
-## LOCALE
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-locale-gen en_US.UTF-8
-get_iplayer
+
 
 ## IPLAYER
 mkdir -p /usr/share/multimedia/video/tv/
