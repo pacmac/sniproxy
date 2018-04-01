@@ -1,5 +1,7 @@
 apt-get update
-sudo apt-get install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git install udns-utils libudns-dev libudns0 ufw 
+apt-get install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
+
+exit 0;
 
 ## Install SNIPROXY
 git clone https://github.com/dlundquist/sniproxy.git 
