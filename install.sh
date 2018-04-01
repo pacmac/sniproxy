@@ -1,7 +1,5 @@
-apt-get -y update
-apt-get -y install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
-
-exit 0;
+#apt-get -y update
+#apt-get -y install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
 
 ## Install SNIPROXY
 git clone https://github.com/dlundquist/sniproxy.git 
@@ -9,6 +7,8 @@ cd sniproxy*
 compile ./autogen.sh && dpkg-buildpackage 
 ./autogen.sh && dpkg-buildpackage
 dpkg -i ../sniproxy*_amd64.deb
+
+exit 0;
 
 ## UFW
 ufw allow from 45.119.154.253
