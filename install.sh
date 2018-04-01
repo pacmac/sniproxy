@@ -13,7 +13,13 @@ git clone https://github.com/dlundquist/sniproxy.git
 cd sniproxy*
 compile ./autogen.sh && dpkg-buildpackage 
 ./autogen.sh && dpkg-buildpackage
-dpkg -i ../sniproxy*_amd64.deb
+
+cd ../
+dpkg -i sniproxy*_amd64.deb
+
+## CONFIG SNIPROXY
+mv /etc/sniproxy.conf /etc/sniproxy.conf.orig
+cp -rp ./sniproxy.conf /etc/sniproxy.conf
 
 exit 0;
 
