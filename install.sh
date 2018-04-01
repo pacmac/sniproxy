@@ -1,12 +1,12 @@
 #apt-get -y update
 #apt-get -y install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
 
-
 ## LOCALE
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-locale-gen en_US.UTF-8
+echo "export LANGUAGE=en_US.UTF-8" >> /etc/bash.bashrc
+echo "export LANG=en_US.UTF-8" >> /etc/bash.bashrc
+echo "export LC_ALL=en_US.UTF-8" >> /etc/bash.bashrc
+echo "locale-gen en_US.UTF-8" >> /etc/bash.bashrc
+source /etc/bash.bashrc
 
 ## Install SNIPROXY
 git clone https://github.com/dlundquist/sniproxy.git 
@@ -20,28 +20,23 @@ dpkg -i sniproxy*_amd64.deb
 ## CONFIG SNIPROXY
 mv /etc/sniproxy.conf /etc/sniproxy.conf.orig
 cp -rp ./sniproxy.conf /etc/sniproxy.conf
+nano /etc/sniproxy.conf 
 
-exit 0;
+## START & TEST
+/usr/sbin/sniproxy
+ps aux | grep sni
+tail -f /var/log/sniproxy/https_access.log
 
 ## UFW
 ufw allow from 45.119.154.253
 ufw enable
-ufw status
-
-## START & TEST
-sniproxy
-ps aux | grep sni
-tail -f /var/log/sniproxy/https_access.log
-
-
 
 ## IPLAYER
 mkdir -p /usr/share/multimedia/video/tv/
 mkdir -p /usr/share/multimedia/audio/radio/
-
-sudo add-apt-repository ppa:jon-hedgerows/get-iplayer
-sudo apt-get update
-apt-get install get-iplayer
+add-apt-repository -y ppa:jon-hedgerows/get-iplayer
+apt-get -y update
+apt-get -y install get-iplayer
 get_iplayer --pvr
 
 
