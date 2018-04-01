@@ -37,8 +37,11 @@ mkdir -p /usr/share/multimedia/audio/radio/
 add-apt-repository -y ppa:jon-hedgerows/get-iplayer
 apt-get -y update
 apt-get -y install get-iplayer
-get_iplayer --pvr
 cd ~/sniproxy
 cp -rp options ~/.get_iplayer/
+
+## TEST IPLAYER
+get_iplayer --pvr
+
 
 
