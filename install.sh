@@ -1,5 +1,5 @@
-apt-get update
-apt-get install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
+apt-get -y update
+apt-get -y install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
 
 exit 0;
 
