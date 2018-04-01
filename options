@@ -1,0 +1,13 @@
+## USES OPTS
+whitespace 1
+nopurge 1
+outputtv /usr/share/multimedia/video/tv/
+outputradio /usr/share/multimedia/audio/radio/
+fileprefix <dldate> - <nameshort> - <senum> <episode>
+# proxy http://185.3.94.234:8888
+# modes flashhd1,flashhigh1,flashhigh2,flashstd1,flashstd2,flashvhigh1,flashvhigh2
+# modes flashstd1,flashstd2,flashvhigh1,flashvhigh2
+modes vgood
+#--command 'echo "<filename>";chmod 777 "<filename>" &'
+
+# ffmpeg "/usr/bin/ffmpeg"
