@@ -8,8 +8,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 locale-gen en_US.UTF-8
 
-exit 0;
-
 ## Install SNIPROXY
 git clone https://github.com/dlundquist/sniproxy.git 
 cd sniproxy*
