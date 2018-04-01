@@ -1,5 +1,5 @@
-#apt-get -y update
-#apt-get -y install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
+apt-get -y update
+apt-get -y install build-essential autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config fakeroot git udns-utils libudns-dev libudns0 ufw 
 
 ## LOCALE
 echo "export LANGUAGE=en_US.UTF-8" >> /etc/bash.bashrc
@@ -42,6 +42,4 @@ cp -rp options ~/.get_iplayer/
 
 ## TEST IPLAYER
 get_iplayer --pvr
-
-
 
